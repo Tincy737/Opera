@@ -61,7 +61,7 @@
 	position:fixed; 
 	height:50px; 
 	width: calc( 100% + 20px );
-	bottom:10%;
+	bottom: 0;
 	right: 0;
 	left: 0;
 	border:10px solid #CCC;}
