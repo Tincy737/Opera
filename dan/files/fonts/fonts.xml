@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <fonts>
+    <font name="Webding" className="" url="./files/fonts/font-0-0-201991714222821.swf" ttfurl="./files/fonts/font-0-0-201991714222821.ttf"/>
+    <font name="KaiTi" className="FskyFont_simkai" url="./files/fonts/font-1-0-2019917142228167.swf" ttfurl="./files/fonts/font-1-0-2019917142228167.ttf"/>
+    <font name="Times New Roman" className="FskyFont_TIMES" url="./files/fonts/font-2-0-2019917142232429.swf" ttfurl="./files/fonts/font-2-0-2019917142232429.ttf"/>
+    <font name="Times New Roman" className="FskyFont_TIMESBD" url="./files/fonts/font-2-1-2019917142233627.swf" ttfurl="./files/fonts/font-2-1-2019917142233627.ttf"/>
+    <font name="Times New Roman" className="FskyFont_TIMESBI" url="./files/fonts/font-2-2-2019917142234608.swf" ttfurl="./files/fonts/font-2-2-2019917142234608.ttf"/>
+    <font name="Times New Roman" className="FskyFont_TIMESI" url="./files/fonts/font-2-3-2019917142235396.swf" ttfurl="./files/fonts/font-2-3-2019917142235396.ttf"/>
+  </fonts>
+</data>
