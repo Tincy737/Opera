@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关卡2</title>
+<link rel="stylesheet" href="ping.css">
+<style>
+	body{
+		font-family: myfont;
+		color: #531819;
+	}
+    @font-face {
+        font-family: "myfont";
+        src: url("font2/字魂71号-御守锦书.ttf") format("truetype");
+    }
+	.dd1 a{
+		
+		font-size: 40px;
+		text-decoration:none;
+		color: #000000;
+		padding-left: 45%;
+	}
+    </style>
+</head>
+
+<body>
+
+
+
+
+	<div class="ha">关卡2</div>
+	<div class="button">
+		<a href="p1.html"><img src="../images/2.1.png" class="i"></a>
+		<a href="p3.html"><img src="../images/2.2.png" class="i1"></a>
+	</div>
+	<div id="main">
+		<ul id="begin">
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/2.jpg" alt="" width="150px" height="150px" draggable="true" id="drag1" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/5.jpg" alt="" width="150px" height="150px" draggable="true" id="drag2" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/9.jpg" alt="" width="150px" height="150px" draggable="true" id="drag3" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/1.jpg" alt="" width="150px" height="150px" draggable="true" id="drag4" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/6.jpg" alt="" width="150px" height="150px" draggable="true" id="drag5" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/3.jpg" alt="" width="150px" height="150px" draggable="true" id="drag6" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/8.jpg" alt="" width="150px" height="150px" draggable="true" id="drag7" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/4.jpg" alt="" width="150px" height="150px" draggable="true" id="drag8" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+			<li ondrop="drop(event)" ondragover="dropOver(event)">
+				<img src="../images/ping/ping2/7.jpg" alt="" width="150px" height="150px" draggable="true" id="drag9" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+			</li>
+		</ul>
+	</div>
+	<script>
+		var start_index;
+		var end_index;
+		function dragStart(event) {
+			console.log("dragStart: " + event.target.id);
+			start_index = event.target.id;
+		}
+		function dragEnd(event) {
+			event.preventDefault();
+		}
+		function dropOver(event) {
+			event.preventDefault();
+		}
+		function drop(event) {
+			event.preventDefault();
+			console.log("drop: "+event.target.id);
+			end_index = event.target.id;
+			// 交换id1和id2两个元素的attri属性值
+			exchange(start_index, end_index, "src");
+			// 检查拼图是否已完成，若完成显示对应文本
+			check();
+		}
+		function exchange(id1, id2, attri){
+			x1=document.getElementById(id1);
+			x2=document.getElementById(id2);
+			var attri1=x1.getAttribute(attri);
+			x1.setAttribute(attri,x2.getAttribute(attri));
+			x2.setAttribute(attri,attri1);
+			// 添加代码：交换id1和id2两个元素的attri属性值
+		}
+		function check(){
+			var y=document.getElementsByTagName("img");
+			var a,b,c,i;
+			for(i=0;i<9;i++)
+			{
+				a=y[i].getAttribute("src");
+				b=a.lastIndexOf(".");
+				c=Number(a.slice(b-2,b));
+				if(c!=i+1)
+					return false;
+			}
+			alert("恭喜你已过关！");
+		}
+		console.log("");
+		
+	</script>
+</body>
+</html>
+
+

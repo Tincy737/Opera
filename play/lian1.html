@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>连线1</title>
+ <style type="text/css">
+    .wrap{
+             background-color: rgba(255,255,255,.5);;
+			 width:100%;
+	 		 height: 100%;
+			 border:3px solid ;
+			 border-color:#3A4F51;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+            }
+	 </style>
+  <link rel="stylesheet" href="src/css/base.css"/>
+  <link rel="stylesheet" href="src/css/onLine.css"/>
+  <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="src/js/onLine.js"></script>
+  <script type="text/javascript">
+  $(function(){	
+		var obj = $(".demo");
+		var size = obj.size();
+		for(var i=0; i<size; i++ ){
+			obj.eq(i).onLine({
+				regainCanvas: true
+			});
+		}
+  });
+  </script>
+</head>
+<body>    
+  <div class="wrap">
+    <div id="test" align="center"   data-pair ="5" class="demo pt10">	
+        <div class="show cb">
+			
+            <div class="showleft"><!--左侧-->
+            	<span class="showitem" data-id="L1">梅</span>
+                <span class="showitem" data-id="L2">尚</span>
+                <span class="showitem" data-id="L3">程</span>
+                <span class="showitem" data-id="L4">荀</span>
+            </div>
+            
+            
+            
+            <div class="showright"><!--右侧-->
+                <span class="showitem" data-id="R1">慧生</span>
+                <span class="showitem" data-id="R2">兰芳</span>
+                <span class="showitem" data-id="R3">砚秋</span>
+                <span class="showitem" data-id="R4">小云</span>	
+            </div>
+            <div class="tools">
+			    <div class="savePair">查看正确答案</div>
+           		<div class="goBackBtn">回退</div>                                
+                <div class="resetCanvasBtn">重置</div>	
+            </div>
+			<!-- -->
+            <canvas class="canvas"></canvas>
+            <canvas class="backcanvas"></canvas>
+        </div>            
+    </div>  
+</div>
+           
+</body>
+</html>
