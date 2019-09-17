@@ -2,7 +2,7 @@
 	$.fn.onLine = function(options){
 		var box = this;
 		var regainCanvas = options.regainCanvas;
-		var linewidth=2,linestyle="#0C6";//连线绘制--线宽，线色
+		var linewidth=2,linestyle="#0E1B46";//连线绘制--线宽，线色
 		var part1, part2;
 		if( box.find(".show").hasClass("topBottom") === true ){
 			 part1 = box.find(".showtop");
